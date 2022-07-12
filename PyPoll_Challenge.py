@@ -44,7 +44,7 @@ with open(file_to_load) as election_data:
         candidate_name = row[2]
 
         # 3: Extract the county name from each row.
-        county = row[2]
+        county = row[1]
 
         # If the candidate does not match any existing candidate add it to
         # the candidate list
@@ -81,7 +81,7 @@ with open(file_to_save, "w") as txt_file:
         f"\nElection Results\n"
         f"-------------------------\n"
         f"Total Votes: {total_votes:,}\n"
-        f"-------------------------\n\n"
+        f"-------------------------\n"
         f"County Votes:\n"
     )
     print(election_results, end="")
